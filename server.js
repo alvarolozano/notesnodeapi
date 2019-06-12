@@ -2,6 +2,7 @@ var express        =         require("express");
 var bodyParser     =         require("body-parser");
 var app            =         express();
 var cors = require('cors');
+
 const host = process.env.host;
 const uname = process.env.uname;
 const pass = process.env.pass;
@@ -130,6 +131,6 @@ app.post('/remove',function(req,res){
 });
   
 });
-app.listen(3000,function(){
-  console.log("Started on PORT 3000");
+app.listen(8080,function(){
+  console.log("Started on PORT 8080");
 })
