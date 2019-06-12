@@ -8,6 +8,7 @@ const uname = process.env.uname;
 const pass = process.env.pass;
 const dbname = process.env.dbname;
 
+console.log(host + " " + uname + " " + pass + " " + dbname);
 fs = require('fs');
 
 
