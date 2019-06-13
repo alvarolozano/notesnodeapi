@@ -51,7 +51,7 @@ app.all('/*', function(req, res, next) {
 });*/
 
 app.get('/table',function(req,res){
-let sql = `SELECT * FROM todo order by id desc`;
+let sql = `SELECT * FROM todo order by id asc`;
 connection.query(sql, (error, results, fields) => {
   if (error) {
     return console.error(error.message);
@@ -106,7 +106,7 @@ app.post('/login',function(req,res){
 });
 
 
-app.post('/remove',function(req,res){
+app.post('/del',function(req,res){
     res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
