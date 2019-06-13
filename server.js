@@ -2,6 +2,7 @@ var express        =         require("express");
 var bodyParser     =         require("body-parser");
 var app            =         express();
 var cors = require('cors');
+var express = require('express');
 
 const host = process.env.host;
 const uname = process.env.uname;
@@ -77,6 +78,12 @@ connection.query(sql, (error, results, fields) => {
     });
     
 });
+
+
+app.use('/', express.static('www'));
+
+
+
 
 app.post('/login',function(req,res){
     res.header("Access-Control-Allow-Origin", "*");
